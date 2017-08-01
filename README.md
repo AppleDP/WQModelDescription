@@ -8,5 +8,8 @@
 <img src="https://github.com/AppleDP/WQModelDescription/blob/master/Effect/Add.png" alt="添加模型输出分类" title="添加模型输出分类">
 </br>
 
+# Pod Install
+`pod 'WQModelDescription', '~>1.0.0'`
+
 # Usage
-将 `NSObject+WQModelDescription` 分类文件拖进项目即可
+不用修改代码，无须在头文件导入类，只要将 `NSObject+WQModelDescription` 分类文件放入项目即可
