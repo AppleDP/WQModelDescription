@@ -13,14 +13,14 @@
 #pragma mark NSObject Description
 @implementation NSObject (WQModelNSObjectDescription)
 - (NSString *)description {
-    return [self modelDescriptionWithIdent:0];
+    return [self modelDescriptionWithIndent:0];
 }
 
 - (NSString *)debugDescription {
-    return [self modelDescriptionWithIdent:0];
+    return [self modelDescriptionWithIndent:0];
 }
 
-- (NSString *)modelDescriptionWithIdent:(NSInteger)level {
+- (NSString *)modelDescriptionWithIndent:(NSInteger)level {
     uint count;
     objc_property_t *properties = class_copyPropertyList([self class], &count);
     NSMutableString *mStr = [NSMutableString string];
@@ -57,11 +57,11 @@
                           indent:(NSInteger)level{
     if ([NSBundle bundleForClass:[value class]] == [NSBundle mainBundle]) {
         // 自定义类
-        if ([value respondsToSelector:@selector(modelDescriptionWithIdent:)]) {
+        if ([value respondsToSelector:@selector(modelDescriptionWithIndent:)]) {
             [mStr appendFormat:@"\t%@%@ = %@%@\n",
              tab,
              name,
-             [value modelDescriptionWithIdent:level + 1],
+             [value modelDescriptionWithIndent:level + 1],
              lastSymbol];
             return;
         }
@@ -91,10 +91,10 @@
                      indent:(NSInteger)level {
     if ([NSBundle bundleForClass:[value class]] == [NSBundle mainBundle]) {
         // 自定义类
-        if ([value respondsToSelector:@selector(modelDescriptionWithIdent:)]) {
+        if ([value respondsToSelector:@selector(modelDescriptionWithIndent:)]) {
             [mStr appendFormat:@"\t%@%@%@\n",
              tab,
-             [value modelDescriptionWithIdent:level + 1],
+             [value modelDescriptionWithIndent:level + 1],
              lastSymbol];
             return;
         }
