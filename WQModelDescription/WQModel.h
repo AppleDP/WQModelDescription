@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "WQNewModel.h"
 
-@interface WQModel : NSObject
+@interface WQModel : WQModelDescription
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger age;
 @property (nonatomic, copy) NSDate *birth;
 @property (nonatomic, copy) NSArray *arr;
 @property (nonatomic, copy) NSSet *set;
+@property (nonatomic, copy) dispatch_block_t block;
 
 @property (nonatomic, strong) WQNewModel *model;
 @end

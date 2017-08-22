@@ -11,9 +11,8 @@
  */
 #import <Foundation/Foundation.h>
 
-
-#pragma mark NSObject Description
-@interface NSObject (WQModelNSObjectDescription)
+#pragma mark Model Description
+@interface WQModelDescription : NSObject
 @end
 
 

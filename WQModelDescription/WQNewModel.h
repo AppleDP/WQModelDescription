@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WQModelDescription.h"
 
-@interface WQNewModel : NSObject
+@interface WQNewModel : WQModelDescription
 @property (nonatomic, copy) NSString *name;
 @end
