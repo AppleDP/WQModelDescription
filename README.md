@@ -8,6 +8,9 @@
 <img src="https://github.com/AppleDP/WQModelDescription/blob/master/Effect/Add.png" alt="添加模型输出分类" title="添加模型输出分类">
 </br>
 
+# Principle
+原理 : http://www.jianshu.com/p/69f0c08db495
+
 # Pod Install
 `pod 'WQModelDescription', '~>1.0.0'`
 
