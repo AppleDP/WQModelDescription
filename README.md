@@ -12,7 +12,7 @@
 原理 : http://www.jianshu.com/p/69f0c08db495
 
 # Pod Install
-`pod 'WQModelDescription', '~>1.0.0'`
+`pod 'WQModelDescription', '~>2.0.0'`
 
 # Usage
-不用修改代码，无须在头文件导入类，只要将 `NSObject+WQModelDescription` 分类文件放入项目即可
+模型类继承 `WQModelDescription.h` 类，将模型实例用 `NSLog` 打印即可
