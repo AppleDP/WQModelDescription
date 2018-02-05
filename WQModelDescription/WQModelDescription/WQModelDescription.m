@@ -9,9 +9,6 @@
 #import "WQModelDescription.h"
 #import <objc/runtime.h>
 
-
-
-
 #pragma mark Model Description
 @implementation WQModelDescription
 - (NSString *)description {
@@ -27,34 +24,38 @@
 - (NSString *)descriptionWithLocale:(id)locale
                              indent:(NSUInteger)level {
     uint count;
-    objc_property_t *properties = class_copyPropertyList([self class], &count);
+    Class cls = [self class];
     NSMutableString *mStr = [NSMutableString string];
     NSMutableString *tab = [NSMutableString stringWithString:@""];
     for (int index = 0; index < level; index ++) {
         [tab appendString:@"\t"];
     }
     [mStr appendString:@"<!--\n"];
-    for (int index = 0; index < count; index ++) {
-        NSString *lastSymbol = index + 1 == count ? @"" : @";";
-        objc_property_t property = properties[index];
-        NSString *name = @(property_getName(property));
-        id value = [self valueForKey:name];
-        if ([value respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
-            [mStr appendFormat:@"\t%@%@ = %@%@\n",
-             tab,
-             name,
-             [value descriptionWithLocale:locale indent:level + 1],
-             lastSymbol];
-        }else {
-            [mStr appendFormat:@"\t%@%@ = %@%@\n",
-             tab,
-             name,
-             value,
-             lastSymbol];
+    while (![NSStringFromClass(cls) isEqualToString:@"WQModelDescription"]) {
+        objc_property_t *properties = class_copyPropertyList(cls, &count);
+        for (int index = 0; index < count; index ++) {
+            NSString *lastSymbol = index + 1 == count ? @"" : @";";
+            objc_property_t property = properties[index];
+            NSString *name = @(property_getName(property));
+            id value = [self valueForKey:name];
+            if ([value respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
+                [mStr appendFormat:@"\t%@%@ = %@%@\n",
+                 tab,
+                 name,
+                 [value descriptionWithLocale:locale indent:level + 1],
+                 lastSymbol];
+            }else {
+                [mStr appendFormat:@"\t%@%@ = %@%@\n",
+                 tab,
+                 name,
+                 value,
+                 lastSymbol];
+            }
         }
+        free(properties);
+        cls = [cls superclass];
     }
     [mStr appendFormat:@"%@--!>",tab];
-    free(properties);
     return [NSString stringWithFormat:@"<%@ : %p> %@",
             NSStringFromClass([self class]),
             self,

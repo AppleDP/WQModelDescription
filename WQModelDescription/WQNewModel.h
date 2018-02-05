@@ -6,9 +6,9 @@
 //  Copyright © 2017年 shenbao. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "WQModelDescription.h"
+#import "WQModel.h"
 
-@interface WQNewModel : WQModelDescription
-@property (nonatomic, copy) NSString *name;
+@interface WQNewModel : WQModel
+@property (nonatomic, copy) NSString *name1;
+@property (nonatomic, assign) NSInteger age1;
 @end

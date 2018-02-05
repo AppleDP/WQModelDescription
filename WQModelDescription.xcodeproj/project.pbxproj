@@ -16,6 +16,7 @@
 		8E42CC181F2EBAE100B7289D /* WQModelDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42CC171F2EBAE100B7289D /* WQModelDescriptionTests.m */; };
 		8E42CC231F2EBAE100B7289D /* WQModelDescriptionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42CC221F2EBAE100B7289D /* WQModelDescriptionUITests.m */; };
 		8E42CC361F2EBCAC00B7289D /* WQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42CC351F2EBCAC00B7289D /* WQModel.m */; };
+		8E6766652027FD6400F90020 /* WQNewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6766642027FD6400F90020 /* WQNewModel2.m */; };
 		8E935F471F30177600D29818 /* WQModelDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E935F461F30177600D29818 /* WQModelDescription.m */; };
 		8EAEE89D1F2F02A900B90B1D /* WQNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAEE89C1F2F02A900B90B1D /* WQNewModel.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,8 @@
 		8E42CC241F2EBAE100B7289D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E42CC341F2EBCAC00B7289D /* WQModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQModel.h; sourceTree = "<group>"; };
 		8E42CC351F2EBCAC00B7289D /* WQModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQModel.m; sourceTree = "<group>"; };
+		8E6766632027FD6400F90020 /* WQNewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQNewModel2.h; sourceTree = "<group>"; };
+		8E6766642027FD6400F90020 /* WQNewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQNewModel2.m; sourceTree = "<group>"; };
 		8E935F451F30177600D29818 /* WQModelDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQModelDescription.h; sourceTree = "<group>"; };
 		8E935F461F30177600D29818 /* WQModelDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQModelDescription.m; sourceTree = "<group>"; };
 		8EAEE89B1F2F02A900B90B1D /* WQNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQNewModel.h; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				8E42CC351F2EBCAC00B7289D /* WQModel.m */,
 				8EAEE89B1F2F02A900B90B1D /* WQNewModel.h */,
 				8EAEE89C1F2F02A900B90B1D /* WQNewModel.m */,
+				8E6766632027FD6400F90020 /* WQNewModel2.h */,
+				8E6766642027FD6400F90020 /* WQNewModel2.m */,
 				8E42CC061F2EBAE100B7289D /* Main.storyboard */,
 				8E42CC091F2EBAE100B7289D /* Assets.xcassets */,
 				8E42CC0B1F2EBAE100B7289D /* LaunchScreen.storyboard */,
@@ -301,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E42CC361F2EBCAC00B7289D /* WQModel.m in Sources */,
+				8E6766652027FD6400F90020 /* WQNewModel2.m in Sources */,
 				8EAEE89D1F2F02A900B90B1D /* WQNewModel.m in Sources */,
 				8E935F471F30177600D29818 /* WQModelDescription.m in Sources */,
 				8E42CC051F2EBAE100B7289D /* ViewController.m in Sources */,
@@ -400,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

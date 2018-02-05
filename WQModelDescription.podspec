@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WQModelDescription"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "将模型对象的所有属性信息输出到控制台"
   s.description  = <<-DESC
   将模型对象的所有属性信息输出来控制台
